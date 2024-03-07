@@ -16,9 +16,9 @@
 body {
   background-color: #FFFCFA;
   margin: 0;
+  font: "Lato", sans-serif;
   padding: 0;
   color: #1E1E1E;
-  font-family: "Lato", sans-serif;
   box-sizing: border-box;
   font-size: var(--fz16);
   font-weight: 400;
@@ -75,7 +75,6 @@ select {
   height: fit-content;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  width: 100%;
   transition: all 0.3s;
 }
 input.error,
@@ -140,8 +139,7 @@ select.error {
 ._title {
   font-size: var(--fz28);
   font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
+  color: #1E212C;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -217,7 +215,7 @@ ul, ol {
 }
 
 .hero {
-  height: 50vh;
+  height: 100vh;
 }
 .hero .heroBlock .swiper {
   display: flex;
@@ -259,6 +257,8 @@ ul, ol {
   display: flex;
   justify-content: center;
   background-image: url("../img/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero .heroBlock .swiper .swiper-wrapper .swiper-slide .info-block {
   margin-left: auto;
@@ -338,4 +338,87 @@ ul, ol {
   top: -40px;
   font-size: var(--fz28);
   font-weight: 700;
+}
+
+.videoSection .videoBlock .info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.videoSection .videoBlock .info-block .text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+.videoSection .videoBlock .info-block .text .desc {
+  color: #787A80;
+}
+.videoSection .videoBlock .info-block .video {
+  background-color: #000000;
+  width: 1320px;
+  height: 500px;
+}
+.videoSection .videoBlock .info-block .video video {
+  opacity: 0.5;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.OurSection .OurBlock .info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.OurSection .OurBlock .info-block .text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+.OurSection .OurBlock .info-block .text .desc {
+  color: #787A80;
+}
+.OurSection .OurBlock .info-block .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 188px;
+}
+.OurSection .OurBlock .info-block .content .item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  align-items: center;
+}
+.OurSection .OurBlock .info-block .content .item .icon {
+  width: 48px;
+}
+.OurSection .OurBlock .info-block .content .item .icon img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.OurSection .OurBlock .info-block .content .item .text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  text-align: center;
+}
+.OurSection .OurBlock .info-block .content .item .text .desc {
+  color: #787A80;
+}
+.OurSection .OurBlock .info-block .content .item:nth-child(1)::before, .OurSection .OurBlock .info-block .content .item:nth-child(2)::before {
+  content: url("../img/divider.png");
+  position: absolute;
+  transform: translateX(250px);
+}
+
+.question .questionBlock .info-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 }/*# sourceMappingURL=style.css.map */
