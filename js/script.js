@@ -17,14 +17,15 @@ $("body").on('click', '[href*="#"]', function (e) {
 var swiper = new Swiper(".headerSlider", {
     cssMode: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
     },
     pagination: {
       el: ".swiper-pagination",
     },
     mousewheel: true,
     keyboard: true,
+    loop: true,
   });
 
 $(document).on('click', '.checkField', function (el) {
