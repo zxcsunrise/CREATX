@@ -2,7 +2,10 @@ $lblue: #4D6F95;;
 $dblue: #2B4761;
 $black: #000000;
 $dark: #1E1E1E;
-$white: #FFFCFA;
+$white: #fdfdfd;
+$gray_200: #F4F5F6;
+$gray_400: #D7DADD;
+$gray_600: #9A9CA5;
 $gray_700: #787A80;
 $gray_800: #424551;
 $gray_900: #1E212C;
@@ -87,13 +90,18 @@ input,
 textarea,
 select {
     outline: none;
-    background: $white;
+    background: $gray_200;
     padding: 10px 18px;
+    border: $gray_400 1px solid;
     height: fit-content;
-    backdrop-filter: blur(5px);
     transition: all .3s;
+    border-radius: 4px;
     &.error {
         border-color: red!important;
+    }
+    &placeholder {
+        font: $font;
+        color: $gray_600;
     }
 }
 // select {
@@ -133,7 +141,7 @@ select {
     &:hover {
         color: $black;
         background-color: $white;
-        border: 1px solid $white;
+        border: 1px solid $black;
     }
     &.transparent {
         background-color: transparent;
@@ -156,7 +164,7 @@ select {
     }
 }
 ._title {
-    font-size: var(--fz28);
+    font-size: var(--fz48);
     font-weight: 700;
     color: $gray_900;
 }
@@ -373,7 +381,7 @@ ul, ol {
         .info-block {
             display: flex;
             flex-direction: column;
-            gap: 60px;
+            gap: 40px;
             .text {
                 display: flex;
                 flex-direction: column;
@@ -397,6 +405,8 @@ ul, ol {
     }
 }
 .OurSection {
+    margin-bottom: 220px;
+    
     .OurBlock {
         .info-block {
             display: flex;
@@ -452,12 +462,83 @@ ul, ol {
     }
 }
 .question {
+    position: absolute;
+    top: 2070px;
+    left: 325px;
+    z-index: 10;
+    transform: translateY(300px);
     .questionBlock {
+        
+        padding: 48px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $white;
+        gap: 32px;
+        ._title {
+            font-size: var(--fz28);
+        }
         .info-block {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             gap: 24px;
+            .item {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                .name {
+                    font-size: var(--fz14);
+                }
+                input {
+                    width: 240px;
+                   
+                }
+                .inputMes {
+                    width: 414px;
+                }
+            }
+            .btn {
+                align-self: flex-end;
+                font-size: var(--fz14);
+                padding: 12px 32px;
+            }
+        }
+    }
+}
+.serviceSection {
+    background-image: url('../img/service_bg.jpg');
+    position: relative;
+    height: 100vh;
+    background-repeat: repeat-y;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    z-index: 5;
+    align-items: center;
+    .serviceBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+        }
+        .info-block {
+            display: flex;
+            justify-content: space-between;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            .title {
+                font-size: var(--fz28);
+                font-weight: 700;   
+            }
         }
     }
 }
