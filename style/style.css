@@ -99,7 +99,6 @@ selectplaceholder {
 
 .btn {
   align-self: flex-start;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -131,15 +130,10 @@ selectplaceholder {
   background-color: #fdfdfd;
   color: #2B4761;
 }
-.btn.blue {
-  background-color: #4D6F95;
+.btn.hover-transparent:hover {
+  background-color: transparent;
   color: #fdfdfd;
-  border: 2px solid #fdfdfd;
-}
-.btn.blue:hover {
-  background-color: #4D6F95;
-  color: #2B4761;
-  border: 2px solid #2B4761;
+  border: 1px solid #fdfdfd;
 }
 
 ._title {
@@ -167,6 +161,7 @@ ul, ol {
 
 .header .headerBlock {
   padding: 20px 0;
+  z-index: 200;
 }
 .header .headerBlock .info-block {
   display: flex;
@@ -502,6 +497,30 @@ ul, ol {
   gap: 40px;
 }
 .serviceSection .serviceBlock .content .title {
+  font-size: var(--fz28);
+  font-weight: 700;
+}
+
+.portfolioSection .portfolioBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.portfolioSection .portfolioBlock .info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.portfolioSection .portfolioBlock .info-block .swiper {
+  margin: 0;
+}
+.portfolioSection .portfolioBlock .info-block .content {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.portfolioSection .portfolioBlock .info-block .content .title {
   font-size: var(--fz28);
   font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

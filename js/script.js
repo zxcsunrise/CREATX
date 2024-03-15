@@ -23,9 +23,13 @@ var swiper = new Swiper(".headerSlider", {
     pagination: {
       el: ".swiper-pagination",
     },
-    mousewheel: true,
-    keyboard: true,
     loop: true,
+    delay: 2000,
+  });
+
+  var swiper = new Swiper(".portfolioSwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
   });
 
 $(document).on('click', '.checkField', function (el) {

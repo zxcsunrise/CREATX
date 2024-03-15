@@ -1,0 +1,72 @@
+.hover-effect-btn {
+    position: relative;
+    width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Настройка цвета и прозрачности для блока с заголовком */
+    transition: background 0.5s ease;
+  }
+  .hover-effect-btn:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, 0.9); /* Настройка цвета и прозрачности для блока с заголовком при наведении */
+  }
+  .__title {
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    left: 0;
+    top: 25%; /* Отступ сверху */
+    font-size: 1.900em; /* Размер текста заголовка */
+    text-align: center;
+    text-transform: uppercase; /* Заглавные буквы */
+    color: white; /* Цвет заголовка */
+    z-index: 1;
+    transition: top .5s ease;
+  }
+  .hover-effect-btn:hover .__title {
+    top: 10%; /* Отступ сверху при наведении */
+  }
+  .__title .desc {
+    font-size: 14px;
+  }
+  .btn-block {
+    position: absolute;
+    width: 100%;
+    left:0;
+    top: 65%; /* Отступ сверху */
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+  .btn-block a {
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 15px 40px;
+    text-wrap: nowrap;
+    background-color: #FF5A30;;
+    font-size: var(--fz16);
+    font-weight: 700;
+    transition: all .3s;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 1; 
+  }
+  .hover-effect-btn:hover .btn-block {
+    opacity: 1;
+  }
